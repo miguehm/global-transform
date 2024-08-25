@@ -5,6 +5,7 @@ import rehypeMathJax from 'rehype-mathjax';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://miguehm.github.io',
 	// Configure `remark-math` and `rehype-mathjax` plugins:
   markdown: {
     remarkPlugins: [remarkMath],
