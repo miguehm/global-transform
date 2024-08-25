@@ -1,17 +1,17 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-// import remarkMath from 'remark-math';
-// import rehypeMathJax from 'rehype-mathjax';
+import remarkMath from 'remark-math';
+import rehypeMathJax from 'rehype-mathjax';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://miguehm.github.io',
   base: 'global-transform',
 	// Configure `remark-math` and `rehype-mathjax` plugins:
-  // markdown: {
-  //   remarkPlugins: [remarkMath],
-  //   rehypePlugins: [rehypeMathJax],
-  // },
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeMathJax],
+  },
 	integrations: [
 		starlight({
 			title: 'miguehm',
