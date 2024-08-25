@@ -1,16 +1,17 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import remarkMath from 'remark-math';
-import rehypeMathJax from 'rehype-mathjax';
+// import remarkMath from 'remark-math';
+// import rehypeMathJax from 'rehype-mathjax';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://miguehm.github.io',
+  site: 'https://miguehm.github.io',
+  base: 'global-transform',
 	// Configure `remark-math` and `rehype-mathjax` plugins:
-  markdown: {
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeMathJax],
-  },
+  // markdown: {
+  //   remarkPlugins: [remarkMath],
+  //   rehypePlugins: [rehypeMathJax],
+  // },
 	integrations: [
 		starlight({
 			title: 'miguehm',
@@ -20,7 +21,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Introducción',
-					autogenerate: { directory: 'Introducción' },
+					autogenerate: { directory: 'introduccion' },
 				},
 				{
 					label: 'Diseño',
@@ -31,11 +32,11 @@ export default defineConfig({
 				},
 				{
 					label: 'Evaluación',
-					autogenerate: { directory: 'Evaluación' },
+					autogenerate: { directory: 'evaluacion' },
 				},
 				{
 					label: 'Conclusiones',
-					autogenerate: { directory: 'Conclusiones' },
+					autogenerate: { directory: 'conclusiones' },
 				},
 			],
 		}),
