@@ -14,7 +14,8 @@ export default defineConfig({
   },
 	integrations: [
 		starlight({
-			title: 'miguehm',
+			title: 'Global Transform',
+  		customCss: ['./src/mathjax.css'],
 			social: {
 				github: 'https://github.com/miguehm/',
 			},
