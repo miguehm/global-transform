@@ -1,25 +1,40 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import remarkMath from 'remark-math';
+import rehypeMathJax from 'rehype-mathjax';
 
 // https://astro.build/config
 export default defineConfig({
+	// Configure `remark-math` and `rehype-mathjax` plugins:
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeMathJax],
+  },
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'miguehm',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/miguehm/',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Introducción',
+					autogenerate: { directory: 'Introducción' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Diseño',
+					items: [
+						'diseno/python',
+						'diseno/javascript',
+					]
+				},
+				{
+					label: 'Evaluación',
+					autogenerate: { directory: 'Evaluación' },
+				},
+				{
+					label: 'Conclusiones',
+					autogenerate: { directory: 'Conclusiones' },
 				},
 			],
 		}),
