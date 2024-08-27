@@ -12,6 +12,7 @@ Se ha logrado implementar con éxito un conjunto de transformaciones globales de
 ## Implicaciones y Futuras Direcciones
 
 Las técnicas desarrolladas tienen un potencial significativo para su aplicación en áreas como la visión artificial, la fotografía digital y el análisis de imágenes médicas.
+
 La naturaleza de código abierto del proyecto fomenta la colaboración y el desarrollo continuo por parte de la comunidad científica y de desarrolladores.
 
 ## Referencias
