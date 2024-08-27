@@ -54,6 +54,15 @@ export function getOriginalMat() {
     return originalMat;
 }
 
+const gamma_lut = (gamma) => {
+    let lut = new cv.Mat(1, 256, cv.CV_8U);
+    for (let i = 0; i < 256; i++) {
+        let value = Math.pow(i / 255.0, 1.0 / gamma) * 255.0;
+        lut.ucharPtr(0, i)[0] = Math.round(value);
+    }
+    return lut;
+}
+
 export const applyGammaCorrection = (gamma) => {
     if (isProcessing) return;
     isProcessing = true;
@@ -82,15 +91,6 @@ export const applyGammaCorrection = (gamma) => {
     dst.delete();
 
     isProcessing = false;
-}
-
-const gamma_lut = (gamma) => {
-    let lut = new cv.Mat(1, 256, cv.CV_8U);
-    for (let i = 0; i < 256; i++) {
-        let value = Math.pow(i / 255.0, 1.0 / gamma) * 255.0;
-        lut.ucharPtr(0, i)[0] = Math.round(value);
-    }
-    return lut;
 }
 ```
 
