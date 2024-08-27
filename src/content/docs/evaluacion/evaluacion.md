@@ -11,13 +11,16 @@ title: Evaluación
 ### Corrección Gamma
 
 ![](../../../assets/gamma-1.png)
-$\Gamma = 1$
+
+$\gamma = 1$
 
 ![](../../../assets/gamma-up.png)
-$\Gamma > 1$
+
+$\gamma > 1$
 
 ![](../../../assets/gamma-down.png)
-$\Gamma < 1$
+
+$\gamma < 1$
 
 ### Umbralización
 
@@ -37,10 +40,13 @@ Cinco pesos diferentes.
 ## Implementación en Javascript
 
 ![](../../../assets/js-gamma-1.png)
-$\Gamma = 1$
+
+$\gamma = 1$
 
 ![](../../../assets/js-gamma-up.png)
-$\Gamma > 1$
+
+$\gamma > 1$
 
 ![](../../../assets/js-gamma-down.png)
-$\Gamma < 1$
+
+$\gamma < 1$

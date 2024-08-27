@@ -4,7 +4,7 @@ title: Implementación en Javascript
 
 Esta implementación corre a través Astro Framework y Github pages.
 
-### Corrección Gamma
+## Corrección Gamma
 
 1. Definición de variables globales:
 

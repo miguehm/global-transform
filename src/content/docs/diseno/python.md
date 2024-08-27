@@ -8,7 +8,7 @@ Implementar la librería de OpenCV primero requiere instalarse mediante `pip`.
 pip install opencv-python
 ```
 
-### Mostrar Histograma de una Imagen por Canales de Color
+## Mostrar Histograma de una Imagen por Canales de Color
 
 Un histograma muestra la distribución de frecuencias de los niveles de intensidad de una imagen.
 
@@ -104,7 +104,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-### Corrección Gamma
+## Corrección Gamma
 
 1. Importación de librerías:
 
@@ -143,12 +143,12 @@ Un LUT (Look Up Table) es una tabla de consulta que se utiliza para transformar 
 La función de corrección gamma se define como:
 
 $$
-\text{R(x, y)} = \left(\frac{\text{I(x, y)}}{255}\right)^{\frac{1}{\Gamma}} 255
+\text{R(x, y)} = \left(\frac{\text{I(x, y)}}{255}\right)^{\frac{1}{\gamma}} 255
 $$
 
 Donde
 
-- $\Gamma$: Valor gamma positivo mayor a cero.
+- $\gamma$: Valor gamma positivo mayor a cero.
 - $\text{I(x, y)}$: Imagen original.
 - $\text{R(x, y)}$: Imagen resultante.
 
@@ -163,7 +163,7 @@ Indice | Valor
 ...    | 0
 255    | 0
 
-Evaluamos la función en los valores de cada indice del arreglo. Si $\Gamma = 1.7$
+Evaluamos la función en los valores de cada indice del arreglo. Si $\gamma = 1.7$
 
 Indice | Valor
 -------|------
@@ -176,7 +176,7 @@ Indice | Valor
 
 :::
 
-### Aplicar Corrección Gamma
+## Aplicar Corrección Gamma
 
 ```python
 def get_gamma(image, gamma: float):
@@ -233,14 +233,14 @@ for i in range(len(container_B)):
     container_B[i] = lut[value_B]
 ```
 
-> Utilizar una tabla LUT reduce la cantidad de evaluaciones de la función gamma a 256 (para una imagen de rango dinámico de 8 bits).
+> Utilizar una tabla LUT fija la cantidad de evaluaciones de la función gamma a 256 (para una imagen de rango dinámico de 8 bits).
 
 4. Se unen los canales
 ```python
 image_merge = cv2.merge([container_B, container_G, container_R])
 ```
 
-### Umbralización
+## Umbralización
 
 ```python
 def apply_threshold(image, threshold: int, invert=False):
@@ -304,7 +304,7 @@ channel_G[mask == 1] = G[mask == 1]
 channel_R[mask == 1] = R[mask == 1]
 ```
 
-### Suma Ponderada
+## Suma Ponderada
 
 ```python
 def get_weighted_sum(channel1, channel2, value):
